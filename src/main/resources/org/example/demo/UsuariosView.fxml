@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.UsuariosController"
+            prefWidth="800" prefHeight="600" style="-fx-background-color:transparent;">
+    <top>
+        <Label text="Usuarios" style="-fx-font-size:18px; -fx-font-weight:600; -fx-text-fill:#1f6feb;" BorderPane.alignment="CENTER_LEFT">
+            <BorderPane.margin>
+                <Insets top="10" left="10" bottom="8" right="10"/>
+            </BorderPane.margin>
+        </Label>
+    </top>
+    <center>
+        <VBox spacing="8" padding="Insets(10)">
+            <children>
+                <ListView fx:id="usuariosList" prefHeight="300" style="-fx-background-radius:6;"/>
+                <HBox spacing="8">
+                    <children>
+                        <Button text="Nuevo usuario" onAction="#onNuevoUsuario" style="-fx-background-color:#1f6feb; -fx-text-fill:white; -fx-background-radius:6;"/>
+                        <Button text="Eliminar" onAction="#onEliminarUsuario" style="-fx-background-color:transparent; -fx-text-fill:#333;"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

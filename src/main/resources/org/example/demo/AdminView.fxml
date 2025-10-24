@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.AdminController"
+            style="-fx-font-family: 'Segoe UI', Roboto, Arial; -fx-font-size:13px; -fx-background-color:#f6f7f9;">
+    <!-- Header -->
+    <top>
+        <VBox>
+            <children>
+                <HBox alignment="CENTER_LEFT" spacing="12"
+                      style="-fx-background-color: linear-gradient(to bottom, #ffffff 0%, #fbfdff 100%); -fx-border-color: transparent transparent #e6e6e6 transparent; -fx-border-width:0 0 1 0;">
+                    <padding>
+                        <Insets top="12" right="12" bottom="12" left="12"/>
+                    </padding>
+                    <children>
+                        <Label text="Panel de Administración"
+                               style="-fx-font-size:16px; -fx-font-weight:600; -fx-padding:0 8 0 8; -fx-text-fill:#1f6feb;" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Button text="Salir" onAction="#onClose"
+                                style="-fx-background-color:transparent; -fx-text-fill:#1f6feb; -fx-border-color:transparent; -fx-cursor:hand;" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+
+    <!-- Sidebar -->
+    <left>
+        <VBox spacing="8"
+              style="-fx-background-color: #ffffff; -fx-min-width: 180px; -fx-border-color: transparent #e6e6e6 transparent transparent; -fx-border-width:0 1 0 0;">
+            <padding>
+                <Insets top="12" right="12" bottom="12" left="12"/>
+            </padding>
+            <children>
+                <!-- botón destacado -->
+                <Button text="Dashboard" maxWidth="Infinity" onAction="#showDashboard"
+                        style="-fx-background-color: #eaf4ff; -fx-text-fill:#063970; -fx-alignment: CENTER_LEFT; -fx-padding:8 12 8 12; -fx-background-radius:6; -fx-cursor:hand;" />
+                <Button text="Usuarios" maxWidth="Infinity" onAction="#showUsers"
+                        style="-fx-background-color:transparent; -fx-text-fill:#333333; -fx-alignment: CENTER_LEFT; -fx-padding:8 12 8 12; -fx-cursor:hand;" />
+                <Button text="Ajustes" maxWidth="Infinity" onAction="#showSettings"
+                        style="-fx-background-color:transparent; -fx-text-fill:#333333; -fx-alignment: CENTER_LEFT; -fx-padding:8 12 8 12; -fx-cursor:hand;" />
+                <Region VBox.vgrow="ALWAYS" />
+                <Label text="v1.0" style="-fx-text-fill:#9aa0a6; -fx-font-size:11px;" />
+            </children>
+        </VBox>
+    </left>
+
+    <!-- Content area: aquí se reemplaza el contenido -->
+    <center>
+        <StackPane fx:id="contentPane"
+                   style="-fx-padding:20; -fx-background-color: white; -fx-border-color:#e8edf2; -fx-border-width:1; -fx-background-radius:6;">
+            <children>
+                <!-- contenido por defecto -->
+                <Label text="Bienvenido — área de contenido. Cambia esto dinámicamente desde AdminController."
+                       wrapText="true" style="-fx-text-fill:#222; -fx-font-size:14px;" />
+            </children>
+        </StackPane>
+    </center>
+</BorderPane>

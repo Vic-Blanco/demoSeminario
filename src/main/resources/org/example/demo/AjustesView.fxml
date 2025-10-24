@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.AjustesController"
+            prefWidth="800" prefHeight="600" style="-fx-background-color:transparent;">
+    <children>
+        <VBox spacing="12" layoutX="10" layoutY="10" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0"
+              AnchorPane.rightAnchor="10.0" style="-fx-background-color:transparent;">
+            <children>
+                <Label text="Ajustes" style="-fx-font-size:18px; -fx-font-weight:600; -fx-text-fill:#1f6feb;"/>
+                <HBox spacing="8" alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="Notificaciones:" />
+                        <CheckBox fx:id="notifsCheck" selected="true" />
+                    </children>
+                </HBox>
+                <HBox spacing="8" alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="Tema oscuro:" />
+                        <CheckBox fx:id="darkThemeCheck" />
+                    </children>
+                </HBox>
+
+                <Separator />
+
+                <HBox spacing="8" alignment="CENTER_RIGHT">
+                    <children>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Button text="Guardar" onAction="#onGuardar"
+                                style="-fx-background-color:#1f6feb; -fx-text-fill:white; -fx-background-radius:6; -fx-cursor:hand; -fx-padding:8 14 8 14;"/>
+                    </children>
+                </HBox>
+
+                <Region VBox.vgrow="ALWAYS"/>
+                <Label text="Consejo: los ajustes son de ejemplo y pueden persistirse según tu lógica." wrapText="true"
+                       style="-fx-text-fill:#666; -fx-font-size:11px;"/>
+            </children>
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
